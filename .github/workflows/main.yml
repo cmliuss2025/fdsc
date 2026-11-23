@@ -11,11 +11,11 @@ on:
           - '4 台机器 (推荐 50 万以下)'
           - '8 台机器 (极速并发，推荐 50 万以上)'
           - 'custom (自定义台数)'
-        default: '4 台机器 (推荐 50 万以下)'
+        default: 'custom (自定义台数)'
       custom_shards:
         description: '自定义分片机器数 (选 custom 时生效，1~20)'
         required: false
-        default: '4'
+        default: '20'
       scan_mode:
         description: '扫描模式'
         required: true
@@ -24,7 +24,7 @@ on:
           - 'proxyip (推荐：Workers/VLESS ProxyIP 专测，100% 可用)'
           - 'cf (Cloudflare 官方/Anycast 节点优选)'
           - 'custom (通用自定义)'
-        default: 'proxyip (推荐：Workers/VLESS ProxyIP 专测，100% 可用)'
+        default: 'cf (Cloudflare 官方/Anycast 节点优选)'
       port_mode:
         description: '端口模式'
         required: true
@@ -34,7 +34,7 @@ on:
           - '明文端口'
           - '加密端口'
           - '自定义端口'
-        default: '标准端口 (默认)'
+        default: '加密端口'
       custom_ports:
         description: '自定义端口 (选自定义端口时生效，支持 1234, 5678 或 1000-2000)'
         required: false
